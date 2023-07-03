@@ -4,7 +4,8 @@ const taskSchema = new Schema(
   {
     title: { type: String, required: true },
     description: { type: String, default: null },
-    completedAt: { type: Date, default: null },
+    isCompleted: { type: Boolean, default: false, nullable: false },
+    completedAt: { type: String, default: '' },
   },
   { timestamps: true, versionKey: false },
 )

@@ -1,5 +1,6 @@
 import { FastifyInstance } from 'fastify'
 import {
+  completeTask,
   createTask,
   deleteTask,
   getAllTasks,
@@ -13,4 +14,5 @@ export async function tasksRoutes(app: FastifyInstance) {
   app.get('/:id', getTaskById)
   app.put('/:id', updateTask)
   app.delete('/:id', deleteTask)
+  app.patch('/:id/complete', completeTask)
 }

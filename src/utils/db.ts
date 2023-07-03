@@ -5,7 +5,7 @@ const dataBaseUrl = 'mongodb://root:root@db:27017'
 export async function dbConnection() {
   try {
     set('strictQuery', true)
-    await connect(dataBaseUrl)
+    await connect(dataBaseUrl, { dbName: 'tasks' })
     console.log('Connected to database!')
   } catch (e) {
     console.log('Error: ', e)

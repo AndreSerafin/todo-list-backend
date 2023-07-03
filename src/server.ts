@@ -4,10 +4,6 @@ import { dbConnection } from './utils/db'
 
 const app = fastify()
 
-app.get('/teste', async (req, rep) => {
-  return 'Ola tudo bem?'
-})
-
 app.register(tasksRoutes, { prefix: '/tasks' })
 
 dbConnection()
